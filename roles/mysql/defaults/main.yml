@@ -1,0 +1,18 @@
+---
+# defaults file for mysql
+#wp_mysql_db: db_wordpress
+#wp_mysql_user: user_wordpress
+#wp_mysql_password: wordpress123
+
+
+#wp_mysql_db: db_cacti
+#wp_mysql_user: user_cacti
+#wp_mysql_password: cacti123
+
+wp_mysql_db1: db_database1
+wp_mysql_user1: user_database1
+wp_mysql_password1: database123
+
+wp_mysql_db2: db_database2
+wp_mysql_user2: user_database2
+wp_mysql_password2: database234

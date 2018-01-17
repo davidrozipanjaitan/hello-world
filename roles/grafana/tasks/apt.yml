@@ -1,0 +1,23 @@
+
+---
+- name: Install package cloud gpg key
+  apt_key: url=https://packagecloud.io/gpg.key state=present validate_certs=no 
+  sudo: yes
+
+- name: install pycurl package in order to use the apt_repository module
+  apt: pkg=python-pycurl state=present
+  sudo: yes
+
+- name: Add apt repository
+  apt_repository:
+    repo: 'deb https://packagecloud.io/grafana/stable/debian/ wheezy main'
+    state: present
+  sudo: yes
+
+- name: Install Grafana package
+  sudo: yes
+  apt:
+    name: "{{ grafana_pkg }}"
+    state: present
+  notify:
+    - Restart grafana

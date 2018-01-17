@@ -1,0 +1,13 @@
+---
+# tasks file for cacti
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+  sudo: yes
+
+- name: Install cacti
+  apt: name={{ item }} state=present
+  sudo: yes
+  with_items:
+    - cacti-cactid
+    - snmpd
+  notify: restart snmpd

@@ -1,0 +1,7 @@
+---
+# handlers file for cacti
+
+- name: restart snmpd
+  service: name=snmpd state=restarted
+  sudo: yes
+

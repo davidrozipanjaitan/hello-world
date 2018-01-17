@@ -1,0 +1,29 @@
+---
+# tasks file for mysql
+#- name: Create mysql database
+#  mysql_db: name={{ wp_mysql_db }} state=present
+
+#- name: Create mysql user
+#  mysql_user: 
+#    name={{ wp_mysql_user }} 
+#    password={{ wp_mysql_password }} 
+#    priv=*.*:ALL
+
+- name: Create mysql database1
+  mysql_db: name={{ wp_mysql_db1 }} state=present
+
+- name: Create mysql user1
+  mysql_user:
+    name={{ wp_mysql_user1 }}
+    password={{ wp_mysql_password1 }}
+    priv=*.*:ALL
+
+- name: Create mysql database2
+  mysql_db: name={{ wp_mysql_db2 }} state=present
+
+- name: Create mysql user2
+  mysql_user:
+    name={{ wp_mysql_user2 }}
+    password={{ wp_mysql_password2 }}
+    priv=*.*:ALL
+
