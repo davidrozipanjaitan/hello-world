@@ -1,6 +1,3 @@
 # hello-world
-First time to exploration Github
 
-Hi teams,
-
-Ini perubahan yang saya buat, silakan dilakukan cross check.
+Example Configuration Installing wordpress using ansible on ubuntu 14.04
